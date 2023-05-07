@@ -10,6 +10,8 @@ const MyModal = {
     flex-direction: column;
     align-items: center;
 
+    padding: 24px;
+
     background: hsl(0, 0%, 16%);
     border-radius: 8px;
 
