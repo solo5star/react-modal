@@ -4,8 +4,8 @@
 
 이 라이브러리를 사용하기 위해선 `react@^18.0.0`, `react-dom@^18.0.0`, `styled-components@^6.0.0` 이 필요합니다.
 
-* [**Storybook**](https://solo5star.github.io/react-modal/storybook/)
-* [**Example**](https://solo5star.github.io/react-modal/example/)
+* [Storybook](https://solo5star.github.io/react-modal/storybook/)
+* [Example](https://solo5star.github.io/react-modal/example/)
 
 <br><br>
 
@@ -81,6 +81,8 @@ const App = () => {
 <br><br>
 
 ## Inject style using `styled-components`
+
+`styled-components` 라이브러리를 사용하여 스타일을 주입하여 사용할 수 있습니다.
 
 ![Example Styled Modal](https://user-images.githubusercontent.com/20203944/236696117-b065488d-32f4-40cb-918c-980448bf08c7.png)
 
