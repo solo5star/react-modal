@@ -12,6 +12,14 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+const Basic = {
+  ...Modal,
+  Content: styled(Modal.Content)`
+    padding: 24px;
+    background: white;
+  `,
+};
+
 export const Default: Story = {
   args: {
     open: true,
@@ -25,9 +33,9 @@ export const Default: Story = {
           열기
         </button>
 
-        <Modal.Root {...args} open={open} onClose={() => setOpen(false)}>
-          <Modal.Backdrop onClick={() => setOpen(false)} />
-          <Modal.Content>
+        <Basic.Root {...args} open={open} onClose={() => setOpen(false)}>
+          <Basic.Backdrop onClick={() => setOpen(false)} />
+          <Basic.Content>
             <section>
               <h1>Hello! This is default modal.</h1>
               <p>
@@ -38,8 +46,8 @@ export const Default: Story = {
             <button type="button" onClick={() => setOpen(false)}>
               닫기
             </button>
-          </Modal.Content>
-        </Modal.Root>
+          </Basic.Content>
+        </Basic.Root>
       </>
     );
   },
@@ -51,6 +59,8 @@ const StyledModal = {
     background-color: hsla(209, 100%, 30%, 0.3);
   `,
   Content: styled(Modal.Content)`
+    padding: 24px;
+
     border: 2px solid hsl(209, 100%, 41%);
     border-radius: 16px;
     border-bottom-left-radius: 0;
