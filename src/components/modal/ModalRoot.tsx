@@ -1,4 +1,5 @@
 import type { PropsWithChildren } from 'react';
+import ReactDOM from 'react-dom';
 import { styled } from 'styled-components';
 import { useKeyEvent } from '../../hooks/useKeyEvent';
 import type { StyledProps } from '../../types/StyledProps';
@@ -36,9 +37,10 @@ export const ModalRoot: React.FC<ModalRootProps> = (props) => {
     if (event.key === 'Escape') onClose?.();
   });
 
-  return (
+  return ReactDOM.createPortal(
     <Root $open={open} className={className}>
       {children}
-    </Root>
+    </Root>,
+    document.body,
   );
 };
