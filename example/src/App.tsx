@@ -1,5 +1,5 @@
+import { Modal } from '@solo5star/react-modal';
 import { useState } from 'react';
-import { Modal } from 'react-modal';
 import { styled } from 'styled-components';
 import './App.css';
 

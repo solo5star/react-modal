@@ -13,7 +13,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-modal": "link:..",
+    "@solo5star/react-modal": "link:..",
     "styled-components": "6.0.0-rc.1"
   },
   "devDependencies": {
