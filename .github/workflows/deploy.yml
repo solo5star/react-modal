@@ -1,0 +1,78 @@
+name: Deploy
+
+on:
+  push:
+    branches: ['main']
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}
+      cancel-in-progress: true
+    permissions:
+      contents: write
+
+    steps:
+      - name: Use repository source
+        uses: actions/checkout@v3
+
+      - name: Use node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm i --frozen-lockfile
+
+      - name: Run Test
+        run: pnpm test
+
+      - name: Prepare Deploy Directory
+        run: mkdir deploy
+
+      - name: Build
+        run: |
+          pnpm build
+
+      - name: Build Storybook
+        run: |
+          pnpm build:storybook
+          mv ./storybook-static ./deploy/storybook
+
+      - name: Build Example
+        run: |
+          cd example
+          pnpm install --frozen-lockfile
+          pnpm build
+          mv ./dist ../deploy/example
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
