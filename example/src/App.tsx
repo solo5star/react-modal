@@ -58,7 +58,7 @@ function App() {
         <button onClick={handleModalOpen}>Open Modal</button>
       </main>
 
-      <MyModal.Root open={modalOpen}>
+      <MyModal.Root open={modalOpen} onClose={handleModalClose}>
         <MyModal.Backdrop onClick={handleModalClose} />
         <MyModal.Content placement={modalPlacement}>
           <h1>Whoa! 🎉 The wild modal has appeared! ✨</h1>
@@ -78,4 +78,3 @@ function App() {
 }
 
 export default App;
-
