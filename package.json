@@ -20,6 +20,7 @@
   "type": "module",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
   "source": "./src/index.ts",
   "exports": {
     ".": {
