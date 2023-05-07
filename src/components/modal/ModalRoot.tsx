@@ -1,12 +1,18 @@
 import type { PropsWithChildren } from 'react';
 import ReactDOM from 'react-dom';
-import { styled } from 'styled-components';
+import { createGlobalStyle, styled } from 'styled-components';
 import { useKeyEvent } from '../../hooks/useKeyEvent';
 import type { StyledProps } from '../../types/StyledProps';
 
 type RootProps = {
   $open?: boolean;
 };
+
+const PreventBodyScroll = createGlobalStyle`
+  body {
+    overflow: hidden;
+  }
+`;
 
 const Root = styled.div<RootProps>`
   display: ${(props) => (props.$open ? 'grid' : 'none')};
@@ -38,9 +44,12 @@ export const ModalRoot: React.FC<ModalRootProps> = (props) => {
   });
 
   return ReactDOM.createPortal(
-    <Root $open={open} className={className}>
-      {children}
-    </Root>,
+    <>
+      {open && <PreventBodyScroll />}
+      <Root $open={open} className={className}>
+        {children}
+      </Root>
+    </>,
     document.body,
   );
 };
