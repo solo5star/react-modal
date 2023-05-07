@@ -24,9 +24,7 @@ const Content = styled.article<ContentProps>`
   align-self: ${(props) => getAlignSelf(props.$placement)};
   justify-self: ${(props) => getJustifySelf(props.$placement)};
 
-  padding: 16px;
   z-index: 1;
-  background-color: white;
 `;
 
 type ModalContentProps = PropsWithChildren<
