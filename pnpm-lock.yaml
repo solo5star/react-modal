@@ -123,9 +123,6 @@ devDependencies:
   rollup-plugin-peer-deps-external:
     specifier: ^2.2.4
     version: 2.2.4(rollup@3.21.5)
-  rollup-plugin-prettier:
-    specifier: ^3.0.0
-    version: 3.0.0(prettier@2.8.8)(rollup@3.21.5)
   storybook:
     specifier: 7.0.9
     version: 7.0.9
@@ -5064,11 +5061,6 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dev: true
 
-  /diff@5.1.0:
-    resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
-    engines: {node: '>=0.3.1'}
-    dev: true
-
   /dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
     engines: {node: '>=8'}
@@ -7626,28 +7618,12 @@ packages:
   /lodash.debounce@4.0.8:
     resolution: {integrity: sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==}
 
-  /lodash.hasin@4.5.2:
-    resolution: {integrity: sha512-AFAitwTSq1Ka/1J9uBaVxpLBP5OI3INQvkl4wKcgIYxoA0S3aqO1QWXHR9aCcOrWtPFqP7GzlFncZfe0Jz0kNw==}
-    dev: true
-
-  /lodash.isempty@4.4.0:
-    resolution: {integrity: sha512-oKMuF3xEeqDltrGMfDxAPGIVMSSRv8tbRSODbrs4KGsRRLEhrW8N8Rd4DRgB2+621hY8A8XwwrTVhXWpxFvMzg==}
-    dev: true
-
-  /lodash.isnil@4.0.0:
-    resolution: {integrity: sha512-up2Mzq3545mwVnMhTDMdfoG1OurpA/s5t88JmQX809eH3C8491iu2sfKhTfhQtKY78oPNhiaHJUpT/dUDAAtng==}
-    dev: true
-
   /lodash.memoize@4.1.2:
     resolution: {integrity: sha512-t7j+NzmgnQzTAYXcsHYLgimltOV1MXHtlOWf6GjL9Kj8GK5FInw5JotxvbOs+IvV1/Dzo04/fCGfLVs7aXb4Ag==}
     dev: true
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-    dev: true
-
-  /lodash.omitby@4.6.0:
-    resolution: {integrity: sha512-5OrRcIVR75M288p4nbI2WLAf3ndw2GD9fyNv3Bc15+WCxJDdZ4lYndSxGd7hnG6PVjiJTeJE2dHEGhIuKGicIQ==}
     dev: true
 
   /lodash@4.17.21:
@@ -7686,13 +7662,6 @@ packages:
   /lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
-    dev: true
-
-  /magic-string@0.26.7:
-    resolution: {integrity: sha512-hX9XH3ziStPoPhJxLq1syWuZMxbDvGNbVchfrdCtanC7D13888bMFow61x8axrx+GfHLtVeAx2kxL7tTGRl+Ow==}
-    engines: {node: '>=12'}
-    dependencies:
-      sourcemap-codec: 1.4.8
     dev: true
 
   /magic-string@0.30.0:
@@ -8989,24 +8958,6 @@ packages:
       rollup: 3.21.5
     dev: true
 
-  /rollup-plugin-prettier@3.0.0(prettier@2.8.8)(rollup@3.21.5):
-    resolution: {integrity: sha512-E0UqeVX1F+ATrHsXKXIywddjK+iFKOeOGI/drZY/wVq/xfHPjghviIhsFz7I0Wfuzp8jeN+4L7kVwQ/X84mOBw==}
-    engines: {node: '>=6.0.0'}
-    peerDependencies:
-      prettier: ^1.0.0 || ^2.0.0
-      rollup: ^1.0.0 || ^2.0.0 || ^3.0.0
-    dependencies:
-      '@types/prettier': 2.7.2
-      diff: 5.1.0
-      lodash.hasin: 4.5.2
-      lodash.isempty: 4.4.0
-      lodash.isnil: 4.0.0
-      lodash.omitby: 4.6.0
-      magic-string: 0.26.7
-      prettier: 2.8.8
-      rollup: 3.21.5
-    dev: true
-
   /rollup@3.21.5:
     resolution: {integrity: sha512-a4NTKS4u9PusbUJcfF4IMxuqjFzjm6ifj76P54a7cKnvVzJaG12BLVR+hgU2YDGHzyMMQNxLAZWuALsn8q2oQg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
@@ -9253,11 +9204,6 @@ packages:
   /source-map@0.7.4:
     resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
     engines: {node: '>= 8'}
-    dev: true
-
-  /sourcemap-codec@1.4.8:
-    resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
-    deprecated: Please use @jridgewell/sourcemap-codec instead
     dev: true
 
   /space-separated-tokens@1.1.5:
