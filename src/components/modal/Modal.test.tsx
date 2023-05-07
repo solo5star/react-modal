@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { Modal } from './Modal';
 
 context('열린 상태일 때', () => {
@@ -13,15 +14,15 @@ context('열린 상태일 때', () => {
     expect(screen.getByText('CONTENT')).toBeVisible();
   });
 
-  it('ESC를 누르면 onClose가 호출되어야 한다.', () => {
+  it('ESC를 누르면 onClose가 호출되어야 한다.', async () => {
     const onClose = jest.fn();
-    const { container } = render(
+    render(
       <Modal.Root open onClose={onClose}>
         <div>CONTENT</div>
       </Modal.Root>,
     );
 
-    fireEvent.keyDown(container);
+    await userEvent.keyboard('{Escape}');
 
     expect(onClose).toBeCalled();
   });
