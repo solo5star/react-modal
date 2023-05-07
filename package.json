@@ -4,6 +4,12 @@
   "description": "A minimal modal implementation for React",
   "author": "solo5star",
   "license": "MIT",
+  "homepage": "https://github.com/solo5star/react-modal",
+  "packageManager": "pnpm@8.3.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/solo5star/react-modal.git"
+  },
   "publishConfig": {
     "access": "public"
   },
