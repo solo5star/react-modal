@@ -1,6 +1,6 @@
 {
   "name": "@solo5star/react-modal",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A minimal modal implementation for React",
   "author": "solo5star",
   "license": "MIT",
