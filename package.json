@@ -27,7 +27,7 @@
     "build": "rimraf dist && rollup --config",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build:storybook": "storybook build"
   },
   "dependencies": {
     "react": "^18.2.0",
