@@ -1,7 +1,7 @@
 {
   "name": "react-modal",
   "version": "0.1.0",
-  "description": "A minimal modal implementation",
+  "description": "A minimal modal implementation for React",
   "author": "solo5star",
   "license": "MIT",
   "keywords": [
