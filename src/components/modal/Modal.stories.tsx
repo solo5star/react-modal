@@ -26,7 +26,7 @@ export const Default: Story = {
         </button>
 
         <Modal.Root {...args} open={open} onClose={() => setOpen(false)}>
-          <Modal.Backdrop />
+          <Modal.Backdrop onClick={() => setOpen(false)} />
           <Modal.Content>
             <section>
               <h1>Hello! This is default modal.</h1>
