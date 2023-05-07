@@ -17,6 +17,7 @@
     "prettier"
   ],
   "rules": {
+    "@typescript-eslint/consistent-type-imports": "error",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "import/extensions": "off",
@@ -42,5 +43,16 @@
         ]
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off",
+        "react-hooks/rules-of-hooks": "off"
+      }
+    }
+  ]
 }
