@@ -11,10 +11,17 @@
 
 ## Table of Contents <!-- omit from toc -->
 
+- [Features](#features)
 - [Installation](#installation)
 - [Getting Started](#getting-started)
-- [Features](#features)
 - [Inject style using `styled-components`](#inject-style-using-styled-components)
+
+<br><br>
+
+## Features
+
+* ESM과 CJS 모두 지원합니다.
+* styled-components를 사용한 스타일 주입을 지원합니다.
 
 <br><br>
 
@@ -70,13 +77,6 @@ const App = () => {
   )
 }
 ```
-
-<br><br>
-
-## Features
-
-* ESM과 CJS 모두 지원합니다.
-* styled-components를 사용한 스타일 주입을 지원합니다.
 
 <br><br>
 
