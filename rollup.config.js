@@ -22,6 +22,7 @@ export default [
         include: /\.[jt]sx?$/,
         minify: process.env.NODE_ENV === 'production',
         tsconfig: 'tsconfig.build.json',
+        jsx: 'automatic',
       }),
       peerDepsExternal(),
     ],
@@ -30,7 +31,7 @@ export default [
     input: 'src/index.ts',
     output: [
       {
-        file: pkg.types,
+        file: pkg.exports['.'].types,
         format: 'cjs',
       },
     ],
