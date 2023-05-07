@@ -6,6 +6,10 @@ import './App.css';
 const MyModal = {
   ...Modal,
   Content: styled(Modal.Content)`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     background: hsl(0, 0%, 16%);
     border-radius: 8px;
 
