@@ -13,7 +13,7 @@
 
 - [Features](#features)
 - [Installation](#installation)
-- [Getting Started](#getting-started)
+- [Basic Example](#basic-example)
 - [Inject style using `styled-components`](#inject-style-using-styled-components)
 
 <br><br>
@@ -49,7 +49,7 @@ $ pnpm add @solo5star/react-modal
 
 <br><br>
 
-## Getting Started
+## Basic Example
 
 ```tsx
 import { useState } from 'react';
